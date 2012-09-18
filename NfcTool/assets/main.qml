@@ -18,7 +18,10 @@ import "common"
 NavigationPane {
     id: nav
     objectName: "navPane"
-        
+    
+    function updateData() {
+    }
+    
     Page {
         id: menuListPage
         
@@ -54,7 +57,7 @@ NavigationPane {
         }
     }
     onTopChanged: {
-        if (pane == menuListPage) {
+        if (page == menuListPage) {
             // Clear selection when returning to the menu list page.
             menuList.clearSelection ();
         }
